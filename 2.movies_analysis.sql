@@ -36,7 +36,6 @@ JOIN
 ORDER BY 
     t.title DESC;
 
-
   
 -- ADDING MOVIES
 
@@ -58,6 +57,7 @@ SET genre = 'SF'
 WHERE genre = 'Sci-Fi' 
 AND studio LIKE 'Falstead Group'
 
+  
 -- REMOVE ALL THE MOVIES DIRECTED BY GARRY SCOTT FOR LIONEL BROWNSTONE STUDIO
 
 
