@@ -1,4 +1,4 @@
-# Movies-SQL
+# Movie Analytics and Database Management Using SQL
 
 ## 1. Project Overview
 
