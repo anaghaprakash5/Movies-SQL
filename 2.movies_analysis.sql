@@ -1,6 +1,4 @@
 -- SELECTING DATA
-
-
 SELECT id, 
   CASE
     WHEN critics_rating > 8 THEN 'Good'
@@ -11,8 +9,6 @@ FROM movies_critic_rating
 
 
 -- FILTERING MOVIE BY SCORE
-
-
 SELECT 
     t.title AS "Title", 
     CASE 
@@ -38,17 +34,13 @@ ORDER BY
 
   
 -- ADDING MOVIES
-
-
 INSERT INTO movies_basic(title, genre, release_year, director, studio, critics_rating) 
 VALUES('Run for the Forest', 'Drama', 1946, 'Rence Pera', 'Lionel Brownstone', 7.3), 
 ('Luck of the Night', 'Drama', 1951, 'Rence Pera', 'Lionel Brownstone', 6.8), 
 ('Invader Glory', 'Adventure', 1953, 'Rence Pera', 'Lionel Brownstone', 5.5)
 
 
--- UPDATING GENRE 'sci-fi' TO 'sf' FOR ALL FALSTEAD GROUP FILMS
-
-  
+-- UPDATING GENRE 'sci-fi' TO 'sf' FOR ALL FALSTEAD GROUP FILMS  
 SELECT * FROM movies_basic 
 WHERE studio LIKE 'Falstead Group'
 
@@ -59,8 +51,6 @@ AND studio LIKE 'Falstead Group'
 
   
 -- REMOVE ALL THE MOVIES DIRECTED BY GARRY SCOTT FOR LIONEL BROWNSTONE STUDIO
-
-
 SELECT * FROM movies_basic 
 WHERE director = 'Garry Scott' 
 AND studio = 'Lionel Brownstone'
@@ -71,8 +61,6 @@ AND studio = 'Lionel Brownstone'
 
 
 -- FINDING THE TOP 10 RATED MOVIES.
-
-
 SELECT t.title, d.dir_name, cr.critics_rating, p.filename 
 FROM movies_title t 
 JOIN movies_director d ON t.director_id = d.id
@@ -80,4 +68,3 @@ JOIN movies_critic_rating cr ON t.id = cr.titles_id
 JOIN posters p ON t.id = p.titles_id 
 ORDER BY critics_rating DESC 
 LIMIT 10
-
