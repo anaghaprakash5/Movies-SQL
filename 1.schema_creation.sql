@@ -51,20 +51,3 @@ CREATE TABLE posters(
   filename VARCHAR(100) NOT NULL, 
   resolution VARCHAR(20) NOT NULL, 
   FOREIGN KEY(titles_id) REFERENCES titles(id))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
